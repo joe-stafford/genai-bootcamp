@@ -24,8 +24,8 @@ HTTP_URL_PATTERN = r'^http[s]{0,1}://.+$'
 openai.api_key = os.environ.get("OPENAI_API_KEY", "abc123")
 
 # Define root domain to crawl
-domain = "en.wikipedia.org"
-full_url = "https://en.wikipedia.org/wiki/Chuck_Norris_facts/"
+domain = "developer.hashicorp.com"
+full_url = "https://developer.hashicorp.com/terraform/docs"
 
 # Create a class to parse the HTML and get the hyperlinks
 class HyperlinkParser(HTMLParser):
@@ -396,4 +396,4 @@ def answer_question(
 
 print(answer_question(df, question="What day is it?", debug=False))
 
-print(answer_question(df, question="What is Chuck Norris' favorite fact?"))
+print(answer_question(df, question="What is Terraform?"))
